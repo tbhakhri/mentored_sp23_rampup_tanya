@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./styles.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="title_page">
+        <div class="title">
+            <h1><b>what color is your personality?</b></h1>
+        </div>
+        <div class="container">
+            <div class="typed-content">
+                <p>learn what color best represents your vibe :)</p>
+            </div>
+        </div>
+        <line></line>
+        <div class="start"><button onclick="transition_question('title_page', 'question_one')">take the test!</button></div>
+    </div>
+
+    <div id="question_one">
+        <div class="question" id="q1"><h2>question 1</h2></div>
+        <div id="firstq" class="instructions">let's go on vacation! where are we headed?</div>
+        <div></div>
+        <div class="options">
+            <button onclick="updateValues(0, 0, 102); transition_question('question_one', 'question_two')">an island</button>
+            <button onclick="updateValues(0, 102, 0); transition_question('question_one', 'question_two')">a city</button>
+            <button onclick="updateValues(102, 0, 13); transition_question('question_one', 'question_two')">the mountains</button>
+            <button onclick="updateValues(40, 0, 70); transition_question('question_one', 'question_two')">the countryside</button>
+            <button onclick="updateValues(0, 0, 0); transition_question('question_one', 'question_two')">i don't know</button>
+        </div>
+    </div>
+
+    <div id="question_two">
+        <div class="question" id="q2"><h2>question 2</h2></div>
+        <div id="secondq" class="instructions">let's get food. what flavor are you in the mood for?</div>
+        <div class="options">
+            <button onclick="updateValues(0, 102, 102); transition_question('question_two', 'question_three')">spicy</button>
+            <button onclick="updateValues(0, 0, 102); transition_question('question_two', 'question_three')">salty</button>
+            <button onclick="updateValues(50, 102, 0); transition_question('question_two', 'question_three')">sweet</button>
+            <button onclick="updateValues(0, 51, 51); transition_question('question_two', 'question_three')">sour</button>
+            <button onclick="updateValues(0, 0, 0); transition_question('question_two', 'question_three')">i don't know</button>
+        </div>
+    </div>
+    <div id="question_three">
+        <div class="question" id="q3"><h2>question 3</h2></div>
+        <div id="thirdq" class="instructions">what time of day do you vibe with the most?</div>
+        <div class="options">
+            <button onclick="updateValues(0, 102, 0); transition_question('question_three', 'question_four')">dawn</button>
+            <button onclick="updateValues(0, 0, 102); transition_question('question_three', 'question_four')">daytime</button>
+            <button onclick="updateValues(51, 0, 51); transition_question('question_three', 'question_four')">dusk</button>
+            <button onclick="updateValues(102, 102, 0); transition_question('question_three', 'question_four')">midnight</button>
+            <button onclick="updateValues(0, 0, 0); transition_question('question_three', 'question_four')">i don't know</button>
+        </div>
+    </div>
+
+    <div id="question_four">
+        <div class="question" id="q4"><h2>question 4</h2></div>
+        <div id="fourthq" class="instructions">we're being chased!! run!! which way do we go?</div>
+        <div class="options">
+            <button onclick="updateValues(13, 0, 51); transition_question('question_four', 'question_five')">left toward a village</button>
+            <button onclick="updateValues(51, 0, 51); transition_question('question_four', 'question_five')">straight toward a forest</button>
+            <button onclick="updateValues(51, 51, 0); transition_question('question_four', 'question_five')">right toward a cave</button> 
+            <button onclick="updateValues(0, 51, 51); transition_question('question_four', 'question_five')">toward the killer to fight</button>
+            <button onclick="updateValues(0, 0, 0); transition_question('question_four', 'question_five')">i don't know</button>
+        </div>
+    </div>
+    <div id="question_five">
+        <div class="question" id="q5"><h2>question 5</h2></div>
+        <div id="fifthq" class="instructions">which season do you vibe with the most?</div>
+        <div class="options">
+            <button onclick="get_description(); display_color(); updateValues(13, 0, 51); transition_question('question_five', 'result')">spring</button>
+            <button onclick="get_description(); display_color(); updateValues(0, 8, 77); transition_question('question_five', 'result')">summer</button>
+            <button onclick="get_description(); display_color(); updateValues(0, 42, 0); transition_question('question_five', 'result')">fall</button>
+            <button onclick="get_description(); display_color(); updateValues(102, 102, 0); transition_question('question_five', 'result')">winter</button>
+            <button onclick="get_description(); display_color(); updateValues(0, 0, 0); transition_question('question_five', 'result')">i don't know</button>
+        </div>
+    </div>
+
+    <div id="result">
+        <h1>Your Personality Is:</h1>
+        <div class="flexible">
+            <div id="color_strip"></div>
+        </div>
+    </div>
+    
+    <div class="description_of_results" id="white_description">
+        <p>You are either very indecisive, lack a fundamental understanding of who you are, or simply have no personality.</p>
+    </div>
+    <div class="description_of_results" id="high_red_description">
+        <p>You are extremely intense and experience emotions very deeply. Often, this intensity can make you come off as angry or aggressive.</p>
+    </div>
+    <div class="description_of_results" id="med_red_description">
+        <p>You can, at times, be perceived as intense, but you generally are not. You can be aggressive when provoked but are otherwise well in control of your emotions.</p>
+    </div>
+    <div class="description_of_results" id="low_red_description">
+        <p>You are a mild person with a very polite and well-controlled personality. You don't stand up for yourself enough.</p>
+    </div>
+    <div class="description_of_results" id="high_blue_description">
+        <p>You have a tendency to romanticize your life and are a very imaginative person. You have a tendency to get distracted by your own imagination.</p>
+    </div>
+    <div class="description_of_results" id="med_blue_description">
+        <p>At times, you find yourself romanticizing your life and can be very creative if you try. You are occasionally distracted but can focus when needed.</p>
+    </div>
+    <div class="description_of_results" id="low_blue_description">
+        <p>You have a tendency to rely on your senses and are very grounded. You're not the most imaginative but are able to focus very easily.</p>
+    </div>
+    <div class="description_of_results" id="high_green_description">
+        <p>You are optimistic, cheerful, and you have a high capacity for growth. You are a supportive friend but at times you can be too positive.</p>
+    </div>
+    <div class="description_of_results" id="med_green_description">
+        <p>While you aren't unflinchingly optimistic, you are able to look at the bright side when necessary. You are also a supportive friend and have a high capacity for empathy.</p>
+    </div>
+    <div class="description_of_results" id="low_green_description">
+        <p>You are a realist but often struggle seeing the bright side in tough situations.</p>
+    </div>
+    
+
+
+</body>
+</html>

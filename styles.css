@@ -1,0 +1,282 @@
+body {
+    font-family: "Courier New";
+    background-image: url("https://wallpaperaccess.com/full/340434.png");
+    padding-top: 10em;
+    align-items: center;
+  }
+
+  /* Question Divs */
+#title_page{
+  display:block;
+}
+
+#question_one{
+  display: none;
+}
+
+#question_two{
+  display: none;
+}
+
+#question_three{
+  display: none;
+}
+
+#question_four{
+  display: none;
+}
+
+#question_five{
+  display: none;
+}
+
+
+/*result display */
+#result{
+  text-align: center;
+  animation: fadeInFirst 2s;
+  display: none;
+}
+
+.flexible{
+  display: flex;
+  justify-content: center;
+}
+
+#color_strip{
+  height: 100px;
+  width: 100px;
+  animation: fadeInDelay 3s;
+}
+
+/* Descrption display*/
+.description_of_results{
+  margin: 50px;
+  animation: fadeInDelay 3s;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  
+}
+
+#white_description{
+  display: none;
+}
+#high_red_description{
+  display: none;
+}
+#high_green_description{
+  display: none;
+}
+#high_blue_description{
+  display: none;
+}
+#med_red_description{
+  display: none;
+}
+#med_green_description{
+  display: none;
+}
+#med_blue_description{
+  display: none;
+}
+#low_red_description{
+  display: none;
+}
+#low_green_description{
+  display: none;
+}
+#low_blue_description{
+  display: none;
+}
+
+/* Title Stuff */
+
+.container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+    animation: fadeInFirst 2s;
+}
+
+.instructions{
+  overflow: hidden; 
+  border-right: .15em solid rgb(16, 53, 132); 
+  white-space: nowrap;
+  margin: 0 auto; 
+}
+
+/* Question stuff */
+#firstq{
+  width: 402px;
+  height: 30px;
+  line-height:30px;
+  animation: 
+    typeq1 5s steps(40),
+    blink-cursor .75s step-end infinite;
+}
+
+#secondq{
+  width: 498px;
+  height: 30px;
+  line-height:30px;
+  animation: 
+    typeq2 5s steps(40),
+    blink-cursor .75s step-end infinite;
+}
+
+#thirdq{
+  width: 413px;
+  height: 30px;
+  line-height:30px;
+  animation: 
+    typeq3 5s steps(40),
+    blink-cursor .75s step-end infinite;
+}
+
+#fourthq{
+  width: 442px;
+  height: 30px;
+  line-height:30px;
+  animation: 
+    typeq4 5s steps(40),
+    blink-cursor .75s step-end infinite;
+}
+
+#fifthq{
+  width: 375px;
+  height: 30px;
+  line-height:30px;
+  animation: 
+    typeq5 5s steps(40),
+    blink-cursor .75s step-end infinite;
+}
+
+
+/* Typed stuff */
+
+.typed-content{
+    overflow: hidden; 
+    border-right: .15em solid rgb(16, 53, 132); 
+    white-space: nowrap;
+    margin: 0 auto; 
+    width: 535px;
+    height: 35px;
+    line-height: 0px;
+    animation: 
+      type 5s steps(40),
+      blink-cursor .75s step-end infinite;
+}
+
+.question{
+    text-align: center;
+    animation: fadeInFirst 2s;
+}
+
+/* Actual words */
+
+h1{
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size:50px;
+     color:rgb(16, 53, 132);
+}
+
+h2{
+    font-size: 25px;
+    color:rgb(16, 53, 132);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(25, 81, 100);
+    text-align: center;
+}
+
+/* Buttons */
+
+.options{
+    padding: 10px;
+    text-align: center;
+    animation: fadeInDelay 10s;
+}
+
+.start{
+    text-align: center;
+    animation: fadeInDelay 10s;
+    padding: 15px;
+}
+
+.button-container{
+    text-align: center;  
+    padding: 10px;
+}
+
+.button{
+    background-color: aliceblue;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    outline: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: fadeInDelay 10s;
+}
+
+
+/* Animations */
+@keyframes type {
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 535px;}
+}
+
+@keyframes typeq1{
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 402px;}
+}
+
+@keyframes typeq2{
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 498px;}
+}
+
+@keyframes typeq3{
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 413px;}
+}
+
+@keyframes typeq4{
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 442px;;}
+}
+
+@keyframes typeq5{
+    from {width: 0;}
+    25%{width: 0;}
+    100% {width: 375px;}
+}
+
+@keyframes blink-cursor {
+    from, to {border-color: transparent}
+    50% {border-color: rgb(16, 53, 132);}
+}
+
+@keyframes fadeInFirst{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+@keyframes fadeInDelay{
+    from{ opacity: 0; }
+    50%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+
+
+
